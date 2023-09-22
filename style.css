@@ -1,0 +1,89 @@
+
+ *{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 15px;
+    padding: 10px;
+
+}
+.container{
+    background-color: rgb(243, 231, 217);
+    padding: 10px 5px 10px 5px;
+    border: 2px solid  blanchedalmond;
+    border-radius: 4px;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: brown;
+    background-color: rgb(247, 233, 214);
+    border: thick 14px black;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 5px;
+}
+h4{
+    font-family: 'Courier New', Courier, monospace;
+    color: slategray;
+    font-size: 25px;
+}
+fieldset{
+    background-color: rgb(248, 223, 202);
+    border: 1px solid rgb(221, 216, 200);
+}
+label{
+    padding: 10px 5px;
+    display: inline-block;
+}
+@media (max-width:600px) {
+    label{
+        width: 100%
+    }
+    input[type="text"],
+    input [type="email"],
+    input [type="password"],
+    input [type="number"],
+    input [type="date"],
+    select,
+    textarea
+    {
+        min-width: 100%;
+        padding: 5px 2px;
+    }
+}
+input [type="text"],
+input [type="number"],
+input [type="email"],
+input [type="password"],
+input [type="date"],
+select,
+textarea{
+    display: block;
+    width: 50%;
+    margin: 10px 5px;
+    padding: 8px;
+}
+
+input[type="submit"] {
+    padding: 10px 15px; 
+    background-color: rgb(235, 198, 150);
+    color: whitesmoke;
+    border: 2px solid tan;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600; 
+    /* the 'input tag is an 'inline element' so margin auto can't be executed even we set its width until we make the selector as 'block element'  */
+    display: block;
+    width: 80%;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+input[type="submit"]:hover {
+    background-color: rgb(109, 109, 35);
+    border: 2px rgb(53, 49, 46) solid;
+    /* -webkit-transition: all 0.5s ease; */
+    transition: all 0.5s ease;
+
+}
