@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+       <a href=""> <img src="logo/logo2.jpg1.png" alt="" width="150" height="100" ></a>
+    <h3>REGISTRATION FORM</h3>
+
+    <div class="container">
+
+    <form action="backend.php">
+        <h4 style="font-weight: 600;">CONTACT INFORMATION</h4>
+        <label for="first-name"> First Name:</label>
+        <input type="text" id="first-name" required required pattern="[A-Za-z]{1,15}">  
+        <label for="last-name"> Last Name</label>
+        <input type="text" id="last-name" required required pattern="[A-Za-z]{1,15}">
+        <span style="color: gray;">(max characters 15 A-Z a-z)</span>
+        <br><br>
+        <label  for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob" required style="margin-right: 55px;">
+     <label  for="mail">E-mail ID</label>
+        <input type="email" name="email" placeholder="ali.123@gmail.com">
+<br><br>
+<label for="contact">Contact no.</label>
+        <!-- <input type="number">  -->
+        <input type="text" id="contact" pattern="\d{10}" title="Please enter up to 10 digits" required>
+
+        <span style="color: gray;">(max 10 digit number)</span>
+        <br><br>
+        <fieldset>
+            <legend>Gender</legend>
+            <label for="gender">MALE</label>
+            <input type="radio" name="gender" required>
+            <label for="gender">FEMALE</label>
+            <input type="radio" name="gender" required> 
+        </fieldset>
+        <br>
+        <!-- <label for="address">ADDRESS</label>  -->
+        <h4 style="font-weight: 600;">ADDRESS</h4>
+        <textarea name="address" id="address" cols="50" rows="8"></textarea>
+        <br><br>
+        <label for="country-name"> Country</label>
+        <input type="text" id="country-name" required required pattern="[A-Za-z]{1,15}">  
+        <label for="city-name">City</label>
+        <input type="text" id="city-name" required required pattern="[A-Za-z]{1,15}">
+        <span style="color: gray;">(max characters 15 A-Z a-z)</span>
+        <br><br>
+        <label for="postal-code">Postal code</label>
+        <input type="text" id="postal-code" required pattern="\d{5}" title="Please enter up to 5 digits"> 
+        <br> <br>
+        <!-- ////  -->
+        <!-- <label for="field-of-interest">
+            SELECT YOUR FIELD OF INTEREST :
+        </label>  -->
+        <h4 style="font-weight: 600;">SELECT YOUR FIELD OF INTEREST:</h4>
+            <input type="checkbox" name="interest" value="programming"> Programming
+            <input type="checkbox" name="interest" value="design"> Design
+            <input type="checkbox" name="interest" value="data"> Data Science
+            <input type="checkbox" name="interest" value="marketing"> Marketing
+            <br> <br>
+            <input type="checkbox" name="interest" value="other"> If Other
+        <span style="font-weight: bold; margin-left: 20px; color: rgb(61, 61, 61);"> Please specify:</span>
+        <!-- <input style="margin-left: 15px; width: 200px;" type="text" id="otherInterest" name="otherInterest"> -->
+        <input class="interest" style="margin-left: 15px;" type="text" id="otherInterest" name="otherInterest">
+
+        <br> <br>
+        <h4 style="font-weight: 600;">QUALIFICATION:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Examination</th>
+                    <th>Board</th>
+                    <th>Percentage</th>
+                    <th>Year of Passing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Row 1 -->
+                <tr>
+                    <td data-cell="S.No">1</td>
+                    <td data-cell="Examination" style="text-align: center;">Class X</td>
+                    <td data-cell="Board"><input type="text" name="board1" placeholder="Board Name" maxlength="10" required></td>
+                    <td data-cell="Percentage"><input type="text" id="percentage1" placeholder="Percentage (Max 2 digits)" pattern="\d{2}" title="Please enter upto 2-digit number" required></td>
+                    <td data-cell="Year of Passing"><input type="text" name="year1" placeholder="Year" required></td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr>
+                    <td data-cell="S.No">2</td>
+                    <td data-cell="Examination" style="text-align: center;">Class XII</td>
+                    <td data-cell="Board"><input type="text" name="board2" placeholder="Board Name" maxlength="10"></td>
+                    <td data-cell="Percentage"><input type="number" name="percentage2" placeholder="Percentage (Max 2 digits)"placeholder="Percentage" maxlength="2"></td>
+                    <td data-cell="Year of Passing"><input type="text" name="year1" placeholder="Year"></td>
+                </tr>
+                 <!-- Row 3 -->
+                 <tr>
+                    <td data-cell="S.No">3</td>
+                    <td data-cell="Examination" style="text-align: center;">Graduation</td>
+                    <td data-cell="Board"><input type="text" name="board3" placeholder="Board Name" maxlength="10"></td>
+                    <td data-cell="Percentage"><input type="number" name="percentage3" placeholder="Percentage (Max 2 digits)"placeholder="Percentage" maxlength="2"></td>
+                    <td data-cell="Year of Passing"> <input type="text" name="year1" placeholder="Year"></td>
+                </tr>
+                <!-- Row 4 -->
+                <tr>
+                    <td data-cell="S.No">4</td>
+                    <td data-cell="Examination" style="text-align: center;">Masters</td>
+                    <td data-cell="Board"><input type="text" name="board4" placeholder="Board Name" maxlength="10"></td>
+                    <td data-cell="Percentage"><input type="number" name="percentage4" placeholder="Percentage (Max 2 digits)"placeholder="Percentage" maxlength="2"></td>
+                    <td data-cell="Year of Passing"><input type="text" name="year1" placeholder="Year"></td>
+                </tr>
+            </tbody>
+        </table> <br><br>
+        <h4 style="font-weight: 600;">COURSES APPLIED FOR:</h4>
+            <input type="radio" name="course" value="bca" required> BCA
+            <input type="radio" name="course" value="b.com" required> B.Com
+            <input type="radio" name="course" value="bsc" required> B.Sc
+            <input type="radio" name="course" value="ba" required> B.A
+            <br><br>
+            <div class="buttons">
+          <input type="submit" name="submit" value="Submit"> 
+            <input type="reset" value="Reset Form">
+            </div>
+            
+
+</form> 
+</body>
+</html>
