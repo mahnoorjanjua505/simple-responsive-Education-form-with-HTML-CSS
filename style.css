@@ -6,7 +6,7 @@ body{
     font-family: 'Oswald', sans-serif;
     margin: 10px 15px;
     padding: 10px;
-
+    min-width:fit-content ;
 }
 .main-container{
         background-color: rgb(243, 231, 217);
